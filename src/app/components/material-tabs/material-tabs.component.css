@@ -1,0 +1,18 @@
+.mat-tab-header{
+    /*background-color: red; */
+   
+}
+
+/*
+.mat-tab-header-pagination {
+    background-color: red;
+    
+}
+
+*/
+
+
+.mat-tab-labels{
+    justify-content: center; /* align items in Main Axis */
+}
+

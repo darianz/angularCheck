@@ -1,7 +1,11 @@
 
 <div class="container-fluid">
+<div  class="md-content" flex md-scroll-y (swipeleft)="swipe(idx, $event.type)" (swiperight)="swipe(idx, $event.type)">
+    
 
-<mat-tab-group (selectChange)='onSelectChange($event)'>
+
+
+<mat-tab-group  (selectedTabChange)='onSelectChange($event)' [(selectedIndex)]='selectedIndex' (selectedIndexChange)='selectChange()' >
   <mat-tab  label="About Me" >
     <h1>Some tab content</h1>
     <p>...</p>
@@ -38,3 +42,5 @@
 </mat-tab-group>
 
 </div>
+</div>
+
