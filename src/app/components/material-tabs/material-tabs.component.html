@@ -1,11 +1,14 @@
 
+<div class="container-fluid">
+
 <mat-tab-group (selectChange)='onSelectChange($event)'>
-  <mat-tab label="About Me" >
+  <mat-tab  label="About Me" >
     <h1>Some tab content</h1>
     <p>...</p>
   </mat-tab>
   <mat-tab label="Sketches" >
     <h1>Some more tab content</h1>
+    <app-bootstrap-images></app-bootstrap-images>
     <p>...</p>
   </mat-tab>
   <mat-tab label="Portfolio">
@@ -33,3 +36,5 @@
     <p>...</p>
   </mat-tab>
 </mat-tab-group>
+
+</div>

@@ -12,6 +12,7 @@ import { ButtonComponent } from './components/button/button.component';
 import { MaterialTabsComponent } from './components/material-tabs/material-tabs.component';
 import {MatTabsModule} from '@angular/material/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BootstrapImagesComponent } from './components/bootstrap-images/bootstrap-images.component';
 
 
 
@@ -20,7 +21,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AppComponent,
     ImageCheckComponent,
     ButtonComponent,
-    MaterialTabsComponent
+    MaterialTabsComponent,
+    BootstrapImagesComponent
 
 
 
