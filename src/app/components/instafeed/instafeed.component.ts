@@ -15,9 +15,7 @@ export class InstafeedComponent implements OnInit  {
     this.instafeedService.Run();
   }
 
-  instaWorking() {
-    this.working = this.instafeedService.InstaWorking();
-  }
+
 
 
   ngOnInit() {
@@ -30,6 +28,11 @@ export class InstafeedComponent implements OnInit  {
 
 
 /**
+
+
+ instaWorking() {
+    this.working = this.instafeedService.InstaWorking();
+  }
  ngOnChange() {
    this.instaWorking();
   }

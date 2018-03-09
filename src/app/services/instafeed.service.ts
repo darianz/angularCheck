@@ -7,7 +7,7 @@ export class InstafeedService {
   Instafeed ;
   userFeed ;
   working = false;
-
+  check = 0;
 
 
 
@@ -33,12 +33,26 @@ export class InstafeedService {
 
   });
   this.working = true;
-  this.userFeed.run();
+
+
+  if (document.getElementById('instafeed') != null && this.check === 0) {
+    this.check = 1;
+    this.userFeed.run();
+  }
+
 }
 
 }
 
 /**
+  this.working = true;
+  this.userFeed.run();
+if ($('#instafeed').length) {
+    feed.run();
+}
+
+
+
    factoryResolver;
   rootViewContainer;
   constructor(@Inject (ComponentFactoryResolver) factoryResolver) {
