@@ -1,24 +1,35 @@
 
+
+
 <div class="container-fluid">
+    
 <div  class="md-content" flex md-scroll-y (swipeleft)="swipe(idx, $event.type)" (swiperight)="swipe(idx, $event.type)">
     
 
-
-
-<mat-tab-group  (selectedTabChange)='onSelectChange($event)' [(selectedIndex)]='selectedIndex' (selectedIndexChange)='selectChange()' >
+    
+<!--  (selectedIndexChange)='selectChange()'      [(selectedIndex)]='selectedIndex'         -->
+<mat-tab-group  (selectedTabChange)='onSelectChange($event)'   >
+    
   <mat-tab  label="About Me" >
+     
     <h1>Some tab content</h1>
-    <p>...</p>
+    
+    
   </mat-tab>
   <mat-tab label="Sketches" >
+     
     <h1>Some more tab content</h1>
     <app-bootstrap-images></app-bootstrap-images>
-    <p>...</p>
+    
+    
   </mat-tab>
+
   <mat-tab label="Portfolio">
+    
     <h1>Some more tab content</h1>
     <p>...</p>
   </mat-tab>
+
   <mat-tab label="Inked">
     <h1>Some more tab content</h1>
     <p>...</p>
@@ -36,8 +47,11 @@
     <p>...</p>
   </mat-tab>
   <mat-tab label="Blog">
-    <h1>Some more tab content</h1>
-    <p>...</p>
+    <h1>Need To Show Instagram</h1>
+    <app-instafeed></app-instafeed>
+    
+    
+    
   </mat-tab>
 </mat-tab-group>
 

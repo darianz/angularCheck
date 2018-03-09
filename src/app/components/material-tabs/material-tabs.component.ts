@@ -1,8 +1,11 @@
+import { InstafeedComponent } from './../instafeed/instafeed.component';
 import { ImageService } from './../../services/image.service';
 import { ButtonService } from './../../services/button.service';
 import { Component, OnInit , Input , Output } from '@angular/core';
 import {MatTabsModule} from '@angular/material/tabs';
 import { ViewEncapsulation } from '@angular/core';
+
+
 @Component({
   selector: 'app-material-tabs',
   templateUrl: './material-tabs.component.html',
@@ -11,8 +14,34 @@ import { ViewEncapsulation } from '@angular/core';
 })
 export class MaterialTabsComponent implements OnInit {
 
+
+  // can be inserted SWIPE THING
+  @Input()
+  tabId: number;
+  sendID(id: number) {
+    this.buttonService.changeID(id);
+  }
+
+  onSelectChange(event) {
+    this.sendID(event.index + 1);
+
+  }
+
+    constructor(private buttonService: ButtonService , private imageService: ImageService) {
+
+     }
+
+
+    ngOnInit() {
+      this.buttonService.changeID(1);
+    }
+
+}
+
+
+/**
   // Swipe var
-  selectedIndex = 1;
+  selectedIndex = 0;
 
 
 
@@ -46,23 +75,4 @@ export class MaterialTabsComponent implements OnInit {
 
   // End of Swipe Things
 
-
-  sendID(id: number) {
-    this.buttonService.changeID(id);
-  }
-
-  onSelectChange(event) {
-    this.sendID(event.index + 1);
-
-  }
-
-    constructor(private buttonService: ButtonService , private imageService: ImageService) {
-
-     }
-
-
-    ngOnInit() {
-      this.buttonService.changeID(1);
-    }
-
-}
+  */

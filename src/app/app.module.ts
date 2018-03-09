@@ -13,6 +13,8 @@ import { MaterialTabsComponent } from './components/material-tabs/material-tabs.
 import {MatTabsModule} from '@angular/material/tabs';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BootstrapImagesComponent } from './components/bootstrap-images/bootstrap-images.component';
+import { InstafeedComponent } from './components/instafeed/instafeed.component';
+import { InstafeedService } from './services/instafeed.service';
 
 
 
@@ -22,7 +24,8 @@ import { BootstrapImagesComponent } from './components/bootstrap-images/bootstra
     ImageCheckComponent,
     ButtonComponent,
     MaterialTabsComponent,
-    BootstrapImagesComponent
+    BootstrapImagesComponent,
+    InstafeedComponent
 
 
 
@@ -41,7 +44,7 @@ import { BootstrapImagesComponent } from './components/bootstrap-images/bootstra
   exports: [
     MatTabsModule
   ],
-  providers: [ButtonService, ImageService],
+  providers: [ButtonService, ImageService, InstafeedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
