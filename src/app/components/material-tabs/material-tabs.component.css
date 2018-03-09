@@ -1,18 +1,33 @@
 .mat-tab-header{
-    /*background-color: red; */
-   
+    
+    background-color: #f1f1f1;
+}
+.mat-tab-label:hover{
+    background-color: #ddd;
+}
+.mat-tab-label:active{
+    background-color: #ccc;
 }
 
 /*
 .mat-tab-header-pagination {
     background-color: red;
     
+.mat-tab-list{
+    
+    
 }
+}
+
+
 
 */
-
-
 .mat-tab-labels{
-    justify-content: center; /* align items in Main Axis */
+    justify-content: center; 
 }
+
+.mat-tab-body-content{
+    min-height: 500px;
+}
+
 

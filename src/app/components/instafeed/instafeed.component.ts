@@ -10,18 +10,14 @@ import { Component, OnInit , OnChanges } from '@angular/core';
 export class InstafeedComponent implements OnInit  {
 
   constructor(private instafeedService: InstafeedService ) {    }
-  working;
+
   Run( ) {
     this.instafeedService.Run();
   }
 
-
-
-
   ngOnInit() {
 
  }
-
 
 
 }

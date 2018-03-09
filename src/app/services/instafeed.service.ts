@@ -1,24 +1,14 @@
 import { InstafeedComponent } from './../components/instafeed/instafeed.component';
-import { ComponentFactoryResolver, Injectable, Inject, ReflectiveInjector } from '@angular/core';
+import {  Injectable } from '@angular/core';
 
 @Injectable()
 export class InstafeedService {
 
   Instafeed ;
   userFeed ;
-  working = false;
   check = 0;
-
-
-
-
-
-
-  InstaWorking() {
-   return this.working;
-
-  }
-
+  // tslint:disable-next-line:max-line-length
+  template = '<a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}" style="margin: 2% 2% 2% 2%" /></a>' ;
     Run()  {
     this.Instafeed = require('instafeed.js');
     this.userFeed = new this.Instafeed({
@@ -27,14 +17,12 @@ export class InstafeedService {
     userId: '1618086133',
     accessToken: '1618086133.3a81a9f.d8ddace86cba45efa7b4dc0318f944a7',
     resolution: 'low_resolution',
-    template: '<a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}" /></a>',
+    template: this.template,
     sortBy: 'most-recent',
-    limit: 3
+    limit: 15
 
   });
-  this.working = true;
-
-
+  // prevent from this.userFeed.run(); to run multiply times
   if (document.getElementById('instafeed') != null && this.check === 0) {
     this.check = 1;
     this.userFeed.run();
