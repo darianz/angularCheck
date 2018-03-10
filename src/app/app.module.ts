@@ -16,6 +16,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BootstrapImagesComponent } from './components/bootstrap-images/bootstrap-images.component';
 import { InstafeedComponent } from './components/instafeed/instafeed.component';
 import { InstafeedService } from './services/instafeed.service';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { FineartComponent } from './components/fineart/fineart.component';
+import { InkedComponent } from './components/inked/inked.component';
 
 
 
@@ -27,7 +30,10 @@ import { InstafeedService } from './services/instafeed.service';
     MaterialTabsComponent,
     BootstrapImagesComponent,
     InstafeedComponent,
-    IllustrationsComponent
+    IllustrationsComponent,
+    PortfolioComponent,
+    FineartComponent,
+    InkedComponent
 
 
   ],

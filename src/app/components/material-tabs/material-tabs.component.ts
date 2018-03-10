@@ -1,3 +1,6 @@
+import { InkedComponent } from './../inked/inked.component';
+import { FineartComponent } from './../fineart/fineart.component';
+import { PortfolioComponent } from './../portfolio/portfolio.component';
 import { IllustrationsComponent } from './../illustrations/illustrations.component';
 import { InstafeedComponent } from './../instafeed/instafeed.component';
 import { ImageService } from './../../services/image.service';
