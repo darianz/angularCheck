@@ -1,3 +1,4 @@
+import { IllustrationsComponent } from './../illustrations/illustrations.component';
 import { InstafeedComponent } from './../instafeed/instafeed.component';
 import { ImageService } from './../../services/image.service';
 import { ButtonService } from './../../services/button.service';
@@ -13,6 +14,7 @@ import { ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class MaterialTabsComponent implements OnInit {
+
 
 
   // can be inserted SWIPE THING

@@ -1,3 +1,4 @@
+import { IllustrationsComponent } from './components/illustrations/illustrations.component';
 
 import { ImageService } from './services/image.service';
 import { ButtonService } from './services/button.service';
@@ -25,8 +26,8 @@ import { InstafeedService } from './services/instafeed.service';
     ButtonComponent,
     MaterialTabsComponent,
     BootstrapImagesComponent,
-    InstafeedComponent
-
+    InstafeedComponent,
+    IllustrationsComponent
 
 
   ],

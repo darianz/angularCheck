@@ -13,3 +13,13 @@ html{
     font-family: 'lithos-pro-black' !important;
 }
 
+.example-image{
+    width: 440px;
+    padding-top: 10%;
+    height: 500;
+}
+
+img {
+    max-width: 100%;
+    height: 100% ;
+}
