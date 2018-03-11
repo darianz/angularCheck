@@ -10,49 +10,50 @@
 <mat-tab-group  (selectedTabChange)='onSelectChange($event)' >
   
   <mat-tab  label="About Me" >
-
-    <h1>Some tab content</h1>
- 
+      <br>
+    <h1>Hi I'm Idan</h1>
+    <br>
+    <h3>I’m Idan I moved to the States from far away, following my dreams of becoming a comicbook artist.</h3>
+    <h3>graduated from the Kubert School on summer 2016 and was the 2015 award recipient of the Dave Simons Inkwell Memorial Scholarship Fund at the Kubert School</h3>
+    <h3> I'll be posting some of my artwork here. Feel free to contact me with anything on your mind Thank you for visiting!</h3>
+    <h1>Idan</h1>
+        
+    
   </mat-tab>
+  
   <mat-tab label="Sketches" >
-     
-    <h1>Some more tab content</h1>
-    <app-bootstrap-images></app-bootstrap-images>
-    
-    
+      
+        <!--
+      <app-bootstrap-images></app-bootstrap-images> 
+    -->
+    <app-sketch></app-sketch>
   </mat-tab>
 
   <mat-tab label="Portfolio">
-    
-    <h1>Some more tab content</h1>
     <app-portfolio></app-portfolio>
   </mat-tab>
 
   <mat-tab label="Inked">
-    <h1>Some more tab content</h1>
     <app-inked></app-inked>>
-
   </mat-tab>
+
   <mat-tab label="Sketch Covers">
-    <h1>Some more tab content</h1>
-
+    <app-sketchcovers></app-sketchcovers>
   </mat-tab>
+
   <mat-tab label="Illustrations">
-      <h1>Some more tab content</h1>
     <app-illustrations></app-illustrations>>
-
   </mat-tab>
+
   <mat-tab label="Fine Art">
-    <h1>Some more tab content</h1>
     <app-fineart></app-fineart>
   </mat-tab>
+
   <mat-tab label="Blog">
-    <h1>Need To Show Instagram</h1>
+    
      <app-instafeed></app-instafeed> 
-    
-    
-    
   </mat-tab>
+  
 </mat-tab-group>
 
 

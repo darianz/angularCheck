@@ -1,3 +1,5 @@
+import { SketchComponent } from './../sketch/sketch.component';
+import { SketchcoversComponent } from './../sketchcovers/sketchcovers.component';
 import { InkedComponent } from './../inked/inked.component';
 import { FineartComponent } from './../fineart/fineart.component';
 import { PortfolioComponent } from './../portfolio/portfolio.component';

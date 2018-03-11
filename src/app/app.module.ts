@@ -19,6 +19,8 @@ import { InstafeedService } from './services/instafeed.service';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { FineartComponent } from './components/fineart/fineart.component';
 import { InkedComponent } from './components/inked/inked.component';
+import { SketchcoversComponent } from './components/sketchcovers/sketchcovers.component';
+import { SketchComponent } from './components/sketch/sketch.component';
 
 
 
@@ -33,7 +35,9 @@ import { InkedComponent } from './components/inked/inked.component';
     IllustrationsComponent,
     PortfolioComponent,
     FineartComponent,
-    InkedComponent
+    InkedComponent,
+    SketchcoversComponent,
+    SketchComponent
 
 
   ],
