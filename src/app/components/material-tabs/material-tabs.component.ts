@@ -25,8 +25,10 @@ export class MaterialTabsComponent implements OnInit {
   // can be inserted SWIPE THING
   @Input()
   tabId: number;
+
   sendID(id: number) {
     this.buttonService.changeID(id);
+
   }
 
   onSelectChange(event) {

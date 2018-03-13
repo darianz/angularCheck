@@ -6,7 +6,7 @@ import { of } from 'rxjs/observable/of';
 
 @Injectable()
 export class ButtonService {
-@Input()id: number ;
+id: number ;
 
 @Output() change: EventEmitter<number> = new EventEmitter();
 
