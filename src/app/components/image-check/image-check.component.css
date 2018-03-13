@@ -1,11 +1,9 @@
 .Main{
     width: 100%;
     min-height: 200px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    animation-name: '';
-    z-index: 100;
+    
+  
+  
 }
 .Sec{
     animation-name: '';

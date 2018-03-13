@@ -21,6 +21,7 @@ import { FineartComponent } from './components/fineart/fineart.component';
 import { InkedComponent } from './components/inked/inked.component';
 import { SketchcoversComponent } from './components/sketchcovers/sketchcovers.component';
 import { SketchComponent } from './components/sketch/sketch.component';
+import { SocialiconsComponent } from './components/socialicons/socialicons.component';
 
 
 
@@ -37,7 +38,8 @@ import { SketchComponent } from './components/sketch/sketch.component';
     FineartComponent,
     InkedComponent,
     SketchcoversComponent,
-    SketchComponent
+    SketchComponent,
+    SocialiconsComponent
 
 
   ],

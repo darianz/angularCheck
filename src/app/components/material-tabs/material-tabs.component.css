@@ -8,7 +8,12 @@
 .mat-tab-label:active{
     background-color: #ccc;
 }
-
+.social{
+    
+    
+    margin-top: 3%;
+    
+}
 /*
 .mat-tab-header-pagination {
     background-color: red;
