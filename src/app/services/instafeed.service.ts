@@ -8,7 +8,7 @@ export class InstafeedService {
   userFeed ;
   check = 0;
   // tslint:disable-next-line:max-line-length
-  template = '<div style="display: -webkit-inline-box; "> <a  href="{{link}}" target="_blank" id="{{id}}"><img  src="{{image}}" style="margin: 2% 2% 2% 2%;" /> </a> <p style="display: -webkit-inline-box; "> Likes:{{likes}} Comments:{{comments}}</p></div> ' ;
+  template = '<div style="display: -webkit-inline-box; "> <a  href="{{link}}" target="_blank" id="{{id}}"><img  src="{{image}}" style="margin: 2% 2% 2% 2%;" /> </a> <p style="display: -webkit-inline-box; "><img src="/assets/instafeed/LikesSymbol.png"/> {{likes}}</p></div> ' ;
     Run()  {
     this.Instafeed = require('instafeed.js');
     this.userFeed = new this.Instafeed({
@@ -19,7 +19,7 @@ export class InstafeedService {
     resolution: 'low_resolution',
     template: this.template,
     sortBy: 'most-recent',
-    limit: 15
+    limit: 16
 
   });
   // prevent from this.userFeed.run(); to run multiply times
@@ -33,6 +33,10 @@ export class InstafeedService {
 }
 
 /**
+
+ /assets/instafeed/LikesSymbol.png
+  Comments:{{comments}}
+
  style="display: -webkit-inline-box;position: absolute;margin-top: -1rem;margin-left: 10rem;
 
 
