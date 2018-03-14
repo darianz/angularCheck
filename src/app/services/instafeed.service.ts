@@ -8,7 +8,7 @@ export class InstafeedService {
   userFeed ;
   check = 0;
   // tslint:disable-next-line:max-line-length
-  template = '<a href="{{link}}" target="_blank" id="{{id}}"><img src="{{image}}" style="margin: 2% 2% 2% 2%" /></a>' ;
+  template = '<div style="display: -webkit-inline-box; "> <a  href="{{link}}" target="_blank" id="{{id}}"><img  src="{{image}}" style="margin: 2% 2% 2% 2%;" /> </a> <p style="display: -webkit-inline-box; "> Likes:{{likes}} Comments:{{comments}}</p></div> ' ;
     Run()  {
     this.Instafeed = require('instafeed.js');
     this.userFeed = new this.Instafeed({
@@ -33,6 +33,9 @@ export class InstafeedService {
 }
 
 /**
+ style="display: -webkit-inline-box;position: absolute;margin-top: -1rem;margin-left: 10rem;
+
+
   this.working = true;
   this.userFeed.run();
 if ($('#instafeed').length) {
