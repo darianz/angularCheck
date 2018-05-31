@@ -10,6 +10,9 @@ import { ButtonService } from './../../services/button.service';
 import { Component, OnInit , Input , Output } from '@angular/core';
 import {MatTabsModule} from '@angular/material/tabs';
 import { ViewEncapsulation } from '@angular/core';
+import {Router} from '@angular/router';
+
+
 
 
 @Component({
@@ -19,6 +22,7 @@ import { ViewEncapsulation } from '@angular/core';
   encapsulation: ViewEncapsulation.None
 })
 export class MaterialTabsComponent implements OnInit {
+
 
 
 

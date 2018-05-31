@@ -1,3 +1,4 @@
+import { WrongPathComponent } from './components/wrong-path/wrong-path.component';
 import { IllustrationsComponent } from './components/illustrations/illustrations.component';
 
 import { ImageService } from './services/image.service';
@@ -22,7 +23,8 @@ import { InkedComponent } from './components/inked/inked.component';
 import { SketchcoversComponent } from './components/sketchcovers/sketchcovers.component';
 import { SketchComponent } from './components/sketch/sketch.component';
 import { SocialiconsComponent } from './components/socialicons/socialicons.component';
-
+import { BacktotopComponent } from './components/backtotop/backtotop.component';
+import { RouterModule, Routes  } from '@angular/router' ;
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { SocialiconsComponent } from './components/socialicons/socialicons.compo
     InkedComponent,
     SketchcoversComponent,
     SketchComponent,
-    SocialiconsComponent
+    SocialiconsComponent,
+    BacktotopComponent,
+    WrongPathComponent
 
 
   ],
@@ -47,8 +51,12 @@ import { SocialiconsComponent } from './components/socialicons/socialicons.compo
   imports: [
     BrowserModule,
     MatTabsModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
 
+    RouterModule.forRoot([
+      { path: 'sketches', component: SketchComponent },
+      { path: '**', component: WrongPathComponent }
+    ])
 
 
 

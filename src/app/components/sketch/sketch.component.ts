@@ -12,6 +12,7 @@ export class SketchComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+
   }
 
 }

@@ -14,15 +14,17 @@ export class ImageCheckComponent implements OnInit, OnChanges  {
 
 @Input()
 id: number ;
-activeUrl: any;
+@Input() activeUrl: any;
 Image: any;
-SecUrl = 'http://artofidan.com/wp-content/uploads/2017/07/CoverartBoardN.jpg';
 flag = 0;
 prevID ;
+secUrl = 'http://artofidan.com/wp-content/uploads/2017/07/CoverSketchesN.jpg';
+@Input() changeVar = 0;
 
   constructor(private imageService: ImageService , private buttonService: ButtonService  ) {
 
 }
+
 @Output()
  idchange = new EventEmitter();
 
@@ -37,16 +39,13 @@ getImage(): void {
   this.Image = this.imageService.getImage(this.id);
 }
 setURL(): void {
+  this.secUrl = this.activeUrl;
 this.activeUrl = this.Image.url;
-}
-
-setSecURL(): void {
-  this.SecUrl = this.Image.url;
-  }
-
-start() {
 
 }
+
+
+
 
   ngOnInit() {
     this.buttonService.change.subscribe(id => {
@@ -62,12 +61,74 @@ start() {
   ngOnChanges(changes: SimpleChanges) {
 
     console.log('ENTERED ONCHANGES');
+
+    this.buttonService.change.subscribe(id => {
+
+      this.prevID = this.id;
+      this.id = id;
+
+
+      if (this.id > this.prevID ) { // CHOOSING RIGHTER TAB
+        // alert('check animation');
+        document.getElementById('Sec').style.opacity = '1' ;
+        document.getElementById('Main').style.left = '100%';
+        document.getElementById('Main').style.animationDuration = '0.5s';
+        document.getElementById('Main').style.animationName = 'enteringFromRight';
+        document.getElementById('Sec').style.left = '0%';
+        document.getElementById('Sec').style.animationDuration = '0.5s';
+        document.getElementById('Sec').style.animationName = 'exitToLeft';
+
+        // document.getElementById('Main').style.transform = 'translateX(100%)';
+        const delayInMilliseconds = 500; // 0.5 second
+
+        setTimeout(function() {
+        // your code to be executed after 0.5 second
+
+        document.getElementById('Main').style.animationName = '';
+        document.getElementById('Sec').style.animationName = '';
+        document.getElementById('Sec').style.opacity = '0' ;
+        document.getElementById('Main').style.left = '100%';
+        document.getElementById('Main').style.left = '0%';
+        }, delayInMilliseconds);
+
+        }
+        if (this.id < this.prevID ) { // OTHER OPTIONNN
+
+          document.getElementById('Sec').style.opacity = '1' ;
+          document.getElementById('Main').style.left = '-100%';
+          document.getElementById('Main').style.animationDuration = '0.5s';
+          document.getElementById('Main').style.animationName = 'enteringFromLeft';
+          document.getElementById('Sec').style.left = '0%';
+          document.getElementById('Sec').style.animationDuration = '0.5s';
+          document.getElementById('Sec').style.animationName = 'exitToRight';
+
+          // document.getElementById('Main').style.transform = 'translateX(100%)';
+          const delayInMilliseconds = 500; // 0.5 second
+
+          setTimeout(function() {
+          // your code to be executed after 0.5 second
+
+          document.getElementById('Main').style.animationName = '';
+          document.getElementById('Sec').style.animationName = '';
+          document.getElementById('Sec').style.opacity = '0' ;
+          document.getElementById('Main').style.left = '-100%';
+          document.getElementById('Main').style.left = '0%';
+          }, delayInMilliseconds);
+
+
+        }
+
+
+    });
   }
 
 
 }
 
+/*
 
+
+*/
 /*
     this.buttonService.change.subscribe(id => {
 

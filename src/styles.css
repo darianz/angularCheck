@@ -10,12 +10,13 @@
 
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 html{
-    font-family: 'lithos-pro-black' !important;
+    
+    overflow-x: hidden !important;
 }
 
 .example-image{
     width: 310px;
-    padding-top: 10%;
+    margin-top: 10%;
     height: 399px;
 }
 

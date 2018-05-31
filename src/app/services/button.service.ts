@@ -20,6 +20,7 @@ id: number ;
   }
 
   @Output() getID() {
+
     return this.id;
   }
 }

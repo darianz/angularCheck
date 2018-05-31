@@ -1,3 +1,4 @@
+import { ButtonService } from './services/button.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,4 +9,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
   imageSrc: {url: string} = {url: ''};
+  parentChangeVar = 0;
+
+  toogle() {
+    this.parentChangeVar = this.parentChangeVar + 1;
+
+  }
 }
